@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+                            Costum properties
+   ========================================================================== */
+:root {
+  --body-background-color: hsl(204, 43%, 93%);
+  --color-gray: hsl(218, 22%, 67%);
+  --color-teal: hsl(179, 62%, 43%);
+  --color-green: hsl(71, 73%, 54%);
+
+  --font-family-base: "Karla", sans-serif;
+}
+
+body {
+  background-color: hsl(204, 43%, 93%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-base);
+}
+
+.card {
+  display: grid;
+  grid-template-rows: auto auto;
+  width: 42rem;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.137);
+}
+
+/* ==========================================================================
+                            Card Upper Part
+   ========================================================================== */
+
+.card__upper {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card__upper-title {
+  color: var(--color-teal);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.card__upper-paragraph {
+  color: var(--color-gray);
+  line-height: 1.8;
+}
+
+.paragraph--green {
+  color: var(--color-green);
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* ==========================================================================
+                            Card Lower Part
+   ========================================================================== */
+
+.card__lower {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #fff;
+}
+
+/* Lower Left Part
+   ========================================================================== */
+
+.card__lower-left {
+  background-color: var(--color-teal);
+  padding: 2.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.card__lower-left-title {
+  margin-bottom: 1rem;
+}
+
+.card__lower-left-price {
+  color: var(--body-background-color);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.card__lower-left-price span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.card__lower-left-desc {
+  margin-bottom: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.card__lower-left-btn {
+  padding: 1rem;
+  width: 100%;
+  background-color: var(--color-green);
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.205);
+}
+
+/* Lower Right Part
+   ========================================================================== */
+
+.card__lower-right {
+  background-color: hsla(179, 62%, 43%, 0.705);
+  padding: 2.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.card__lower-right-title {
+  margin-bottom: 1rem;
+}
+
+.card__lower-right-desc {
+  line-height: 1.3;
+  color: var(--body-background-color);
+}
+
+/* ==========================================================================
+                            Responsive media quieries
+   ========================================================================== */
+
+@media (max-width: 685px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  .card__lower {
+    grid-template-columns: auto;
+  }
+
+  .card__lower-left {
+    border-radius: 0;
+  }
+
+  .card__lower-right {
+    border-bottom-left-radius: 0.5rem;
+  }
+}
